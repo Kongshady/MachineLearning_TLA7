@@ -1,0 +1,27 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">  
+    <title>Flask TLA07</title>  
+</head>  
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>EMOTION PREDICTION</h1>  
+            <form action="/predict" method="POST">  
+                <textarea name="text" rows="10" cols="50" placeholder="Enter text here..."></textarea><br>  
+                <input type="submit" value="Predict Emotion">  
+            </form>  
+        
+            {% if prediction %}
+                <div class="predict_title">
+                    <h1>PREDICTION:</h1>
+                </div>
+                <h2>{{ prediction }}</h2>  
+            {% endif %}  
+        </div>
+    </div>
+</body>  
+</html>
