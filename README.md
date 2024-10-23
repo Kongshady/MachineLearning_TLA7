@@ -1,8 +1,8 @@
-### Install Virtual Environment
+# Install Virtual Environment
 - pip3 install virtualenv
 - virtualenv env
 
-## Activation
+# Activation
 - env\scripts\activate
 
 # Running
